@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(9, 9, 9);
+    color: rgb(251, 251, 251);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-login{
+    position: absolute;
+    background-image: url('../img/bg-login2.jpg');
+    background-size: cover;
+    width: 100%;
+    height:90vh;
+    z-index: -10;
+    
+}
+
+.login-content{
+    z-index:10;
+}
+
+.card{
+    height: 26rem;
+}
+
+.detail-img{
+    height: 30rem;
 }
