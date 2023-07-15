@@ -14,8 +14,8 @@ const Addmovie = () => {
     year: "",
     desc: "",
     link: "",
-    rating: 0,
-    ratedby: 0,
+    rating: "",
+    ratedby: "",
   });
 
   const [loading, setloading] = useState(false);
@@ -42,8 +42,8 @@ const Addmovie = () => {
       }
     } catch (err) {
       swal({
-        title: "Success",
-        icon: "success",
+        title: "Error",
+        icon: "error",
         buttons: false,
         timer: 3000,
       });

@@ -51,7 +51,7 @@ const Cards = () => {
                     className="ml-2 mb-0.5"
                     size={20}
                     half={true}
-                    value={e.rating/e.ratedby}
+                    value={e.rating / e.ratedby}
                     edit={false}
                   />
                 </h1>
