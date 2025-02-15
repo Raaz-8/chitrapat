@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore,collection} from 'firebase/firestore'
-import { getAuth} from 'firebase/auth';
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC2ixjcUslwMDWjpJi8hG3YGK3Rp17na4o",
@@ -16,7 +16,10 @@ export const db=getFirestore(app);
 export const auth = getAuth(app);
 export const moviesRef=collection(db,'movies');
 export const reviewsRef=collection(db,'reviews');
-export const usersRef=collection(db,'users');
+export const usersRef=collection(db,'user_data');
+export const reviewDataRef=collection(db,'review_data');
+export const googleProvider = new GoogleAuthProvider(); // Google Auth Provider
 
 
+// export const auth=auth();
 export default app;
