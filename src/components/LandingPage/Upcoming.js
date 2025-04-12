@@ -55,8 +55,6 @@ function Upcoming() {
           const dateB = new Date(b.release_date || b.first_air_date);
           return dateA - dateB; // Ascending order
         }).filter((item) => item.poster_path !== null);
-        // combinedResults.sort((a, b) => new Date(a.release_date || a.first_air_date) - new Date(b.release_date || b.first_air_date)).filter((item) => item.poster_path !== null);
-        console.log(combinedResults);
         const contentSlice = isMobile ? combinedResults.slice(0, 3) : combinedResults.slice(0, 7);
         setUpcomingContent(contentSlice);
       } catch (error) {

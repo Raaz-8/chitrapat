@@ -116,10 +116,6 @@ const Cards = () => {
         const dateB = new Date(b.release_date || b.first_air_date);
         return dateA - dateB; // Ascending order
       }).filter((item) => item.poster_path !== null);
-
-      console.log(combinedResults);
-      // const combinedResults = [...upcoming, ...upcomingTv];
-        // combinedResults.sort((a, b) => new Date(a.release_date || a.first_air_date) - new Date(b.release_date || b.first_air_date));
       //Hollywood section starts
       const HollyAll = fetchMovies2({
         language: "en-US", // Hindi language // Sort by popularity
@@ -189,8 +185,6 @@ const Cards = () => {
         HollyTopRated,
         HollyUpcoming,
       ]);
-
-      console.log(allMovies);
 
       if (lang === "hi") {
         if (filter === "upcoming") {

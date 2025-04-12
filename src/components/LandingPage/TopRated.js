@@ -45,8 +45,6 @@ function TopRated() {
           return movie.backdrop_path !== null ;
         });
 
-        console.log(bollywoodMovies);
-
         setTopRatedMovies(bollywoodMovies.slice(0, 10));
         setLoading(false);
       } catch (error) {

@@ -434,10 +434,10 @@ const MovieDetails = () => {
           {/* Overview Tab Content */}
           {activeTab === "review" && (
             <div className="mt-4  overflow-scroll">
-              <div className="">
+              <div className="h-[525px]">
                 {reviewsData
                   ? reviewsData.map((review) => (
-                      <div key={review.id} className="w-full h-[525px]">
+                      <div key={review.id} className="w-full h-auto">
                         <div className="w-full flex items-center ">
                           <div className="w-7 h-7 flex justify-center items-center bg-gray-200 text-gray-400 rounded-full text-xl ">
                             <FaUser />
@@ -464,7 +464,7 @@ const MovieDetails = () => {
                   : ""}
                 {reviews
                   ? reviews.map((review) => (
-                      <div key={review.id} className="w-full h-[525px]">
+                      <div key={review.id} className="w-full h-auto">
                         <div className="w-full flex items-center  mb-2">
                           <div className="w-9 h-9 flex justify-center items-center bg-gray-200 text-gray-400 rounded-full text-2xl justify-end">
                             <FaUser />
@@ -568,7 +568,7 @@ const MovieDetails = () => {
                       <img
                         src={`https://image.tmdb.org/t/p/w500${relatedMovie.poster_path}`}
                         alt={relatedMovie.title}
-                        className="w-full h-auto shadow-lg"
+                        className="w-[138px] h-[192px] shadow-lg"
                       />
                     ) : (
                       <div className="w-[138px] h-[192px] bg-[#47424281] shadow-lg"></div>

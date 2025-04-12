@@ -31,8 +31,7 @@ const ReviewData = ({ movie_id, prevRating, userRated }) => {
       
         // Extract the email
         userEmail = userData.email;
-      
-        console.log("User Email:", userEmail);
+        
       } else {
         console.error("No user data found in local storage.");
       }

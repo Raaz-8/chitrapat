@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import { TailSpin } from "react-loader-spinner";
 import { Link, useNavigate } from "react-router-dom";
 import { query, where, getDocs } from "firebase/firestore";
 import { signInWithPopup } from "firebase/auth";
@@ -47,7 +46,14 @@ const Login = () => {
                 if (isUser) {
                     useAppstate.setlogin(true);
                     useAppstate.setUserName(_data.name);
-                    localStorage.setItem("user", JSON.stringify(_data));
+                    const sessionDuration = 60 * 60 * 1000; // 1 hour in ms
+                    const expiresAt = Date.now() + sessionDuration;
+
+                    const sessionData = {
+                        ..._data,
+                        expiresAt,
+                    };
+                    localStorage.setItem("user", JSON.stringify(sessionData));
 
                     swal({ text: "Logged In Successfully", icon: "success", timer: 3000 });
                     navigate("/");

@@ -141,7 +141,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full viewport height */
-  background-color: #000; /* Adjust to your site's background color */
+  /* background-color: #000; Adjust to your site's background color */
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }

@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import HandleResize from "./HandleResize";
+// import config from useAdminConfig;
+import useAdminConfig from "../Admin/useAdminConfig";
 
 function Popular() {
   const navigate = useNavigate();
   const [popularMovies, setPopularMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const isMobile = HandleResize();
+  const config = useAdminConfig();
+
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -47,6 +51,9 @@ function Popular() {
     fetchMovies();
   }, [isMobile]);
 
+  if (!config) return <p>Loading config...</p>; // or show a skeleton loader
+  const { sectionHeadings } = config || {};
+
   // Movie click handler
   const handleMovieClick = (movieId) => {
     navigate(`/chitrapat/movie/${movieId}`);
@@ -55,8 +62,9 @@ function Popular() {
   return (
     <section className="section mb-12 w-4/6 max-sm:w-full max-sm:px-4">
       {/* Popular Section */}
+      
       <div className="flex justify-between items-center bg-[#DD003F] mb-4 max-sm:pl-2 pl-24">
-        <h2 className="text-xl font-semibold mb-1">Popular Bollywood Movies</h2>
+        <h2 className="text-xl font-semibold mb-1">{sectionHeadings.popularBollywoodMovies}</h2>
         <button
           onClick={() => navigate("/hi/popular")}
           className="mt-4 text-sm hover:underline mb-4 pr-2"

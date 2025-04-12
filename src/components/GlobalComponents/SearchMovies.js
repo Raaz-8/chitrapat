@@ -26,7 +26,6 @@ const SearchMovies = () => {
         });
 
         if (response.status === 200) {
-          console.log(response.data.results);
           setMovies(response.data.results.slice(0, 8)); // Set the search results
         }
       } catch (error) {
@@ -56,7 +55,7 @@ const SearchMovies = () => {
         type="text"
         value={query}
         onChange={handleChange}
-        placeholder="Search for a movie"
+        placeholder="Search for a Movie, Series, TV show"
         // style={{ padding: "10px", width: "300px", color:"black" }}
         className="search-bar p-3 focus:outline-none h-8 text-sm bg-[#47424281] max-sm:absolute max-sm:w-3/4 max-sm:mx-10"
       />

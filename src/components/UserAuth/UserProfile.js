@@ -35,12 +35,8 @@ function UserProfile() {
 
           // Fetch rated movies details if movie IDs exist
           if (userData.movie_id?.length > 0) {
-            console.log("Rated Movies IDs:", userData.movie_id);
             const movieDetails = await fetchRatedMovies(userData.movie_id);
-            console.log("Fetched Movie Details:", movieDetails);
             setRatedMovies(movieDetails);
-          } else {
-            console.log("No rated movies found for the user.");
           }
         } else {
           setError("No user found with the provided email.");

@@ -14,7 +14,7 @@ const Header = () => {
   const useAppstate = useContext(Appstate);
   const location = useLocation();
   // Routes where the search bar should not be displayed
-  const hideSearchBarRoutes = ["/signup", "/login", "/privacy","/about","/user-guide"];
+  const hideSearchBarRoutes = ["/signup", "/login", "/privacy","/about","/user-guide","/admin","/user-profile"];
 
   const shouldShowSearchBar = !hideSearchBarRoutes.includes(location.pathname);
   const [user, setUser] = useState(null);
