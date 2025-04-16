@@ -51,6 +51,7 @@ const Header = () => {
             <img
               src={LOGO}
               className="logo -rotate-6 ml-6 mt-4 max-sm:mx-2 max-sm:w-28"
+              alt="Chitrapat Logo"
             />
           </div>
         </Link>

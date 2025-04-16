@@ -25,6 +25,7 @@ function Footer() {
               <img
                 src={LOGO}
                 className="logo-footer -rotate-6 ml-6 mt-4 max-sm:mx-2 max-sm:w-32"
+                alt="Chitrapat Logo"
               />
             </div>
           </Link>

@@ -338,7 +338,7 @@ const MovieDetails = () => {
             <p className="mb-6 text-sm text-justify font-light w-full pr-8">
               {movie?.overview}
             </p>
-            {movie.status==="Released" ? <ReviewData id={id} />: " "}
+            {movie?.status === "Released" ? <ReviewData id={id} /> : " "}
           </div>
         </div>
         <div className="flex w-2/12 max-sm:w-1/2 max-sm:mt-4 flex-col gap-6">

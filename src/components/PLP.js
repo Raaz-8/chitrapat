@@ -358,9 +358,10 @@ const Cards = () => {
                     <img
                       className="plp-poster object-cover"
                       src={`https://image.tmdb.org/t/p/w500/${e.poster_path}`}
+                      alt="Movie Poster"
                     />
                   ) : (
-                    <img className="plp-poster" src={poster_thumbnail} />
+                    <img className="plp-poster" src={poster_thumbnail} alt="Movie Poster"/>
                   )}
                   <div className="flex flex-col items-start justify-between opacity-70 text-xs w-44 md:w-56">
                     <h1 className="mt-2 break-all md:break-words text-sm font-normal">
